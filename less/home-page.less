@@ -23,17 +23,36 @@
     flex-wrap: wrap;
     width: 100%;
     
-
+    @media @phone {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+     
+    }
 
     img {
       width: 28%;
       margin: 20px 2.5%;
       border-radius: 20px;
       height: 100%;
+      @media @phone {
+        justify-content: center;
+     
+        width:95%;
+      }//this closes @media
+    }//this closes img
 
 
-      
-    }
+    @media @phone {
+      img:nth-child(2) {
+        display: none;
+      }
+ 
+      img:nth-child(3) {
+       display: none;
+     }
+ 
+      }
   }//this closes space images
 
   .visit-planets {
@@ -50,57 +69,103 @@
   }//this closes visit planets
 
   .walk {
-    margin-top: 60px;
+
+
+    .WalkWrapReverse{
+      display:flex;
+      flex-wrap: wrap-reverse;
+      justify-content: center;
+    }//this closes .WalkWrapReverse
+
+    
+    .DisplayFlex();  //LISA'S MIXIN ONE
+    margin-top: 50px;
     border-top: 1px solid @main-border-color;
     padding: 50px 60px;
-    .Display-flex(); //Lisa's mixin number one
+    
+    @media @phone {
+      display: flex;
+      flex-direction: column;
+      padding:15px;
+      }//this closes @media @phone
+
 
     .walk-text {
       width: 50%;
+      
+          @media @phone {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width:100%;
+            
+          
+          }//this closes @media
+
 
       h3 {
         margin-bottom: 10px;
-      }
+      }//this closes h3
 
       p {
         margin-bottom: 26px;
-      }
+      }//this closes p
+    }//this closes .walk-text
 
       .btn {
-        
-        .Display-Flex(); //Lisa's mixin number one
+
+        &:hover {
+          background: white;
+          color: #23293B;
+        }
+        .DisplayFlex(); //LISA'S MIXIN ONE
         
           align-items: center;
           align-content: center;
           
           
         .CustomLayout(height, width);/// PARAMETRIC MIXIN ONE AND ONLY
-        background-color: darkgray;
+        background-color: #23293B;
         color: white;
         border-radius: 5px;
         
         .btn-text{
-          .Display-Flex(); //Lisa's mixin number one
+          .DisplayFlex(); //LISA'S MIXIN ONE
           align-items: center;
           font-family: 'Ubuntu', sans-serif;
           font-size:20px;
           
         }//this closes btn-text
 
-        
+        @media @phone {
+          justify-content: center;
+          width:100%;
+          height:65px;
+        }
       }//this closes btn
     
       
     .walk-img {
       width: 46%;
       margin-left: 4%;
+
+      @media @phone {
+        justify-content: center;
+        width:100%;
+        margin-left: 0%;
+        margin-bottom:4%;
+     
+      }//this closes @media
       
       img {
         width: 100%;
         height: auto;
         border-radius: 10px;
-      }
+
+        
+          
+          
+      }//this closes img
      }//this closes .walk-img
-    }//this closes .walk-text
-  }// this closes walk
+    }//this closes walk
 }//this closes home

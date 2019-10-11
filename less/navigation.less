@@ -2,33 +2,40 @@
 .navigation{
     display: flex;
     flex-direction: column;
-    .JustifyContent(); //Lisa's mixin number two
+    
     align-content: center;
     align-items: center;
-    height: 100px;
-    border: 2px solid blue;
+    height: 125px;
+    width:100%;
+    
     background-color: aliceblue;
     
         nav{
-            width:100%;
-            display: flex;
-            .JustifyContent(); //Lisa's mixin number two
-            border: 2px solid green;
-            font-family:  'Ubuntu', sans-serif;
             
-            @media (max-width:500px){
+            display: flex;
+            .JustifyContent(); //LISA'S MIXIN TWO
+            font-family:  'Ubuntu', sans-serif;
+            width:40%;
+            white-space:nowrap;
+
+            @media @phone {
                 display: flex;
-                flex-direction: column;
-                justify-content: center;
+                .JustifyContent(); //LISA'S MIXIN TWO
+              
+                font-family:  'Ubuntu', sans-serif;
+                width:100%;
               }
+            
+            
+           
            
             a{
-                .Display-Flex(); //Lisa's mixin number one
+                
                 font-family:  'Ubuntu', sans-serif;
                 font-size: 20px;
                 text-decoration: none;
                 color: @main-font-color;
-            
+                margin-bottom: 20px;
            }
             
         }//this closes nav
@@ -37,5 +44,8 @@
         
         h1{
             font-size: 50px;
+            margin-bottom: 10px;
+            margin-top: 20px;
+            
         }
     }
