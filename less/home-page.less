@@ -1,33 +1,43 @@
 // Home Content
 
 .home {
-
-  .intro {
-
-    h2 {
-      padding: 15px;
-    }
-
-    p {
-      padding:0 15px;
-    }
-  
+ 
+.intro {
+  .TopImage{
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
   }
+  h2 {
+  padding: 15px;
+  }
+
+  p {
+  padding:0 15px;
+  }
+
+}//this closes intro
 
   .space-images {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    
+
 
     img {
       width: 28%;
       margin: 20px 2.5%;
       border-radius: 20px;
       height: 100%;
+
+
+      
     }
-  }
+  }//this closes space images
 
   .visit-planets {
+    
     padding: 15px;
 
     h3 {
@@ -37,14 +47,13 @@
     p {
       margin-top: 13px;
     }
-  }
+  }//this closes visit planets
 
   .walk {
     margin-top: 60px;
     border-top: 1px solid @main-border-color;
     padding: 50px 60px;
-    display: flex;
-    justify-content: center;
+    .Display-flex(); //Lisa's mixin number one
 
     .walk-text {
       width: 50%;
@@ -58,9 +67,30 @@
       }
 
       .btn {
-      }
-    }
+        
+        .Display-Flex(); //Lisa's mixin number one
+        
+          align-items: center;
+          align-content: center;
+          
+          
+        .CustomLayout(height, width);/// PARAMETRIC MIXIN ONE AND ONLY
+        background-color: darkgray;
+        color: white;
+        border-radius: 5px;
+        
+        .btn-text{
+          .Display-Flex(); //Lisa's mixin number one
+          align-items: center;
+          font-family: 'Ubuntu', sans-serif;
+          font-size:20px;
+          
+        }//this closes btn-text
 
+        
+      }//this closes btn
+    
+      
     .walk-img {
       width: 46%;
       margin-left: 4%;
@@ -70,6 +100,7 @@
         height: auto;
         border-radius: 10px;
       }
-    }
-  }
-}// home
+     }//this closes .walk-img
+    }//this closes .walk-text
+  }// this closes walk
+}//this closes home

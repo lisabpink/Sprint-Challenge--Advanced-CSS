@@ -1,3 +1,7 @@
+.DisplayFlex {
+  display: flex;
+  justify-content: center;
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -160,6 +164,34 @@ p {
   width: 100%;
   margin: 0 auto;
 }
+.navigation {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+  height: 100px;
+  border: 2px solid magenta;
+  background-color: aliceblue;
+}
+.navigation nav {
+  width: 28%;
+  display: flex;
+  justify-content: space-around;
+  border: 2px solid green;
+  font-family: 'Ubuntu', sans-serif;
+}
+.navigation nav a {
+  display: flex;
+  justify-content: center;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 20px;
+  text-decoration: none;
+  color: #5E6164;
+}
+.navigation h1 {
+  font-size: 50px;
+}
 footer {
   color: #22283B;
   background: #f4f4f4;
@@ -169,6 +201,11 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.home .intro .TopImage {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
 }
 .home .intro h2 {
   padding: 15px;
@@ -211,6 +248,24 @@ footer {
 }
 .home .walk .walk-text p {
   margin-bottom: 26px;
+}
+.home .walk .walk-text .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 100px;
+  height: 35px;
+  background-color: #5E6164;
+  color: white;
+  border-radius: 5px;
+}
+.home .walk .walk-text .btn .btn-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 20px;
 }
 .home .walk .walk-img {
   width: 46%;
