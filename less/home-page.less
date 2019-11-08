@@ -1,33 +1,62 @@
 // Home Content
 
 .home {
-
-  .intro {
-
-    h2 {
-      padding: 15px;
-    }
-
-    p {
-      padding:0 15px;
-    }
-  
+ 
+.intro {
+  .TopImage{
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
   }
+  h2 {
+  padding: 15px;
+  }
+
+  p {
+  padding:0 15px;
+  }
+
+}//this closes intro
 
   .space-images {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    
+    @media @phone {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+     
+    }
 
     img {
       width: 28%;
       margin: 20px 2.5%;
       border-radius: 20px;
       height: 100%;
-    }
-  }
+      @media @phone {
+        justify-content: center;
+     
+        width:95%;
+      }//this closes @media
+    }//this closes img
+
+
+    @media @phone {
+      img:nth-child(2) {
+        display: none;
+      }
+ 
+      img:nth-child(3) {
+       display: none;
+     }
+ 
+      }
+  }//this closes space images
 
   .visit-planets {
+    
     padding: 15px;
 
     h3 {
@@ -37,39 +66,192 @@
     p {
       margin-top: 13px;
     }
-  }
+  }//this closes visit planets
 
   .walk {
-    margin-top: 60px;
+
+
+    .WalkWrapReverse{
+      display:flex;
+      flex-wrap: wrap-reverse;
+      justify-content: center;
+    }//this closes .WalkWrapReverse
+
+    
+    .DisplayFlex();  //LISA'S MIXIN ONE
+    margin-top: 50px;
     border-top: 1px solid @main-border-color;
     padding: 50px 60px;
-    display: flex;
-    justify-content: center;
+    
+    @media @phone {
+      display: flex;
+      flex-direction: column;
+      padding:15px;
+      }//this closes @media @phone
+
 
     .walk-text {
       width: 50%;
+      
+          @media @phone {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width:100%;
+            
+          
+          }//this closes @media
+
 
       h3 {
         margin-bottom: 10px;
-      }
+      }//this closes h3
 
       p {
         margin-bottom: 26px;
-      }
+      }//this closes p
+    }//this closes .walk-text
 
       .btn {
-      }
-    }
 
+        &:hover {
+          background: white;
+          color: CADETBLUE;
+        }
+        .DisplayFlex(); //LISA'S MIXIN ONE
+        
+          align-items: center;
+          align-content: center;
+          
+          
+        .CustomLayout(height, width);/// PARAMETRIC & PARAMETER MIXIN ONE AND ONLY
+        background-color: @btn-bg-color;
+        color: @ebony-clay;
+        border-radius: 5px;
+        
+        .btn-text{
+          .DisplayFlex(); //LISA'S MIXIN ONE
+          align-items: center;
+          font-family: 'Ubuntu', sans-serif;
+          font-size:16px;
+          
+        }//this closes btn-text
+
+        @media @phone {
+          justify-content: center;
+          width:100%;
+          height:65px;
+        }
+      }//this closes btn
+    
+      
     .walk-img {
       width: 46%;
       margin-left: 4%;
+
+      @media @phone {
+        justify-content: center;
+        width:100%;
+        margin-left: 0%;
+        margin-bottom:4%;
+     
+      }//this closes @media
       
       img {
         width: 100%;
         height: auto;
         border-radius: 10px;
-      }
-    }
-  }
-}// home
+
+        
+          
+          
+      }//this closes img
+     }//this closes .walk-img
+    }//this closes walk
+}//this closes home
+
+
+/* fonts  */
+@import url('https://fonts.googleapis.com/css?family=Abel|Aguafina+Script|Artifika|Athiti|Condiment|Dosis|Droid+Serif|Farsan|Gurajada|Josefin+Sans|Lato|Lora|Merriweather|Noto+Serif|Open+Sans+Condensed:300|Playfair+Display|Rasa|Sahitya|Share+Tech|Text+Me+One|Titillium+Web');
+
+
+
+
+#subscribeContainer{
+	background-image: linear-gradient(to top, rgba(205, 156, 242, 0.40) 0%, rgba(246, 255, 255, 0.71) 100%);
+	box-shadow: 0 15px 30px 1px rgba(128, 128, 128, 0.31);
+	text-align: center;
+	border-radius: 5px;
+	margin: 30em auto;
+	background: rgba(255, 255, 255, 0.95);
+	height: 300px;
+	width: 480px;
+	padding: 1em;
+	
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	top: 0;	
+	
+	
+}
+
+#subscribeContainer h2 {
+	background: url(https://static.pexels.com/photos/5782/nature-flowers-vintage-plant.jpg);
+		/*   الكود المسؤال عن اضافة شفافية للنص */
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+/* 	background-image: linear-gradient(to top, #cd9cf2 0%, #f6f3ff 100%); */
+	font-family: 'Playfair Display', serif;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size:cover;
+	letter-spacing: 2px;
+	font-size: 3.5em;
+	margin: 0;
+
+	
+	
+}
+#subscribeContainer p {
+	font-family: 'Farsan', cursive;
+	margin: 3px 0 1.5em 0;
+	font-size: 1.3em;
+	color: #7d7d7d;
+}
+
+#subscribeContainer input {
+/* 	background: rgba(255, 13, 254, 0.90); */
+	width: 210px;
+	display: inline-block;
+	text-align: center;
+	border-radius: 7px;
+	background: #eee;
+	padding: 1em 2em;
+	outline: none;
+	border: none;
+	color: #222;
+	transition: 0.3s linear;
+}
+::placeholder{color: #999;}
+#subscribeContainer input:focus {background: rgba(0, 0, 333, 0.10);}
+
+#subscribeContainer button {
+	background-image: linear-gradient(to left, rgba(255, 146, 202, 0.75) 0%, rgba(145, 149, 251, 0.86) 100%);
+	box-shadow: 0 9px 25px -5px #df91fb;
+	font-family: 'Abel', sans-serif;
+	padding: 0.5em 1.9em;
+	margin: 2.3em 0 0 0;
+	border-radius: 7px;
+	font-size: 1.4em;
+	cursor: pointer;
+	color: #FFFFFF;
+	font-size: 1em;
+	outline: none;
+	border: none;
+	transition: 0.3s linear;
+
+}
+#subscribeContainer button:hover{transform: translatey(2px);}
+#subscribeContainer button:active{transform: translatey(5px);}
