@@ -1,51 +1,58 @@
 // Navigation code here
-.navigation{
+.navigation {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  height: 225px;
+  width: 100%;
+  opacity: 90%;;
+  background-color: PALETURQUOISE;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }//this closes sticky
+@media @phone{
+    height:450px;
+}
+  h1 {
+    font-size: 10rem;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    @media @phone {
+        font-size: 7rem;
+    } //this closes @media @phone
+  }// this closes h1 
+
+  nav {
     display: flex;
-    flex-direction: column;
-    
-    align-content: center;
-    align-items: center;
-    height: 125px;
-    width:100%;
-    
-    background-color: aliceblue;
-    
-        nav{
-            
-            display: flex;
-            .JustifyContent(); //LISA'S MIXIN TWO
-            font-family:  'Ubuntu', sans-serif;
-            width:40%;
-           
+   
+    .JustifyContent(); //LISA'S MIXIN TWO
+    font-family: "Ubuntu", sans-serif;
+    width: 58%;
 
-            @media @phone {
-                display: flex;
-                .JustifyContent(); //LISA'S MIXIN TWO
-              
-                font-family:  'Ubuntu', sans-serif;
-                width:100%;
-              }
-            
-            
-           
-           
-            a{
-                
-                font-family:  'Ubuntu', sans-serif;
-                font-size: 20px;
-                text-decoration: none;
-                color: @main-font-color;
-                margin-bottom: 20px;
-           }
-            
-        }//this closes nav
+    @media @phone {
+      display: flex;
+      flex-direction: column;
+      .JustifyContent(); //LISA'S MIXIN TWO
+      font-family: "Ubuntu", sans-serif;
+      width: 95%;
+      
+    } //this closes @media @phone
 
-
-        
-        h1{
-            font-size: 50px;
-            margin-bottom: 10px;
-            margin-top: 20px;
-            
-        }
-    }
+    a {
+      font-family: "Ubuntu", sans-serif;
+      font-size: 20px;
+      text-decoration: none;
+      color: @main-font-color;
+      margin-bottom: 20px; 
+      
+      
+    } //this closes a
+    
+  } //this closes nav
+}//this closes navigation
